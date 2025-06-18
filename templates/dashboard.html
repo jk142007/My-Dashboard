@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚀 Tool Dashboard (LIVE)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    body.light-mode {
+      background: #f2f2f2;
+      color: #111;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #000101;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00ffff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+      to { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+    }
+    .toggle {
+      margin-bottom: 25px;
+    }
+    .toggle label {
+      padding: 10px 20px;
+      background: #00ffff;
+      color: #111;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    body.light-mode .toggle label {
+      background: #111;
+      color: #fff;
+      box-shadow: 0 0 10px #111;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      color: #fff;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 0 25px #00ffff99;
+      background: #222;
+    }
+    .card a {
+      text-decoration: none;
+      color: #1fe5e5;
+      font-size: 1.2rem;
+      display: block;
+      margin-top: 10px;
+    }
+    .card a:hover {
+      color: #00ff99;
+    }
+    .emoji {
+      font-size: 2.5rem;
+    }
+    body.light-mode .card {
+      background: #ffffff;
+      color: #111;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    body.light-mode .card a {
+      color: #006666;
+    }
+    body.light-mode .card:hover {
+      background: #f0f0f0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle">
+    <label onclick="toggleMode()">🌗 Toggle Mode</label>
+  </div>
+
+  <h1>🚀 Welcome to Flask Mini Apps (LIVE)</h1>
+
+  <div class="container">
+    <div class="card">
+      <div class="emoji">🧮</div>
+      <strong>Calculator</strong>
+      <a href="https://my-calculator-t2b5.onrender.com" target="_blank">Open Tool →</a>
+    </div>
+    <div class="card">
+      <div class="emoji">💱</div>
+      <strong>Currency Converter</strong>
+      <a href="https://currency-converter-1-ee5g.onrender.com" target="_blank">Open Tool →</a>
+    </div>
+    <div class="card">
+      <div class="emoji">🎯</div>
+      <strong>Guessing Game</strong>
+      <a href="https://guessing-game-am7l.onrender.com/" target="_blank">Play Game →</a>
+    </div>
+    <div class="card">
+      <div class="emoji">✊📄✂️</div>
+      <strong>Rock Paper Scissors</strong>
+      <a href="https://ropasis-1.onrender.com" target="_blank">Play Game →</a>
+    </div>
+    <div class="card">
+      <div class="emoji">📜</div>
+      <strong>Random Quote</strong>
+      <a href="https://random-quote-1-5a8j.onrender.com" target="_blank">Inspire Me →</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>
